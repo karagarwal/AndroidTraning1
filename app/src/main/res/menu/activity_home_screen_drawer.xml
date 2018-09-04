@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_user_image"
+            android:icon="@drawable/user_black"
+            android:title="Change Profile Image" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="User Images" />
+        <item
+            android:id="@+id/nav_all_users"
+            android:icon="@drawable/all_users"
+            android:title="All Users" />
+        <item
+            android:id="@+id/nav_change_password"
+            android:icon="@drawable/password"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Share" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Send" />
+
+        <item
+            android:id="@+id/quit"
+            android:icon="@drawable/quit"
+            android:title="Quit" />
+
+    </group>
+</menu>

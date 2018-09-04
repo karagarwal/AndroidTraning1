@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/login_back"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/createId"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/input_layout_etUsername"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/input_layout_etUsername"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/create"
+        android:onClick="createUser"
+        android:text="  Create Account"
+        android:textColor="#e2dada"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/create" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="116dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/createId"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_etUsername"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/imgLogo"
+        android:theme="@style/EditTextTheme2"
+        android:textColorHint="#e2dada"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:paddingLeft="5dp"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/user"
+            android:ems="10"
+            android:hint="Username"
+            android:textColor="#e2dada"
+            android:inputType="textEmailAddress"
+            android:layout_alignParentLeft="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_etPassword"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/input_layout_etUsername"
+        android:theme="@style/EditTextTheme2"
+        android:textColorHint="#e2dada"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="54dp"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/pass"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#e2dada"
+            android:layout_alignParentStart="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBoxSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_layout_etPassword"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp"
+        android:textColor="#e2dada"
+        android:theme="@style/MyCheckBox"
+        android:checked="true"
+        android:text="@string/keep_me_signed_in" />
+
+    <TextView
+        android:id="@+id/forgetID"
+        android:layout_below="@+id/checkBoxSignIn"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/forgot_password"
+        android:onClick="forgetPass"
+        android:textColor="#e2dada"
+        android:textSize="18sp"
+        android:textColorHighlight="#e2dada"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp" />
+
+    <Button
+        android:id="@+id/closeBt"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:textColor="#ffff"
+        android:layout_alignLeft="@+id/createId"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/createId"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/gradient_button"
+        android:elevation="16dp"
+        android:onClick="closeBox"
+        android:text="Close" />
+
+    <Button
+        android:id="@+id/loginBt"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:textColor="#ffff"
+        android:layout_alignBottom="@+id/closeBt"
+        android:elevation="16dp"
+        android:layout_alignEnd="@+id/forgetID"
+        android:background="@drawable/gradient_button"
+        android:onClick="login"
+        android:text="Login" />
+
+</RelativeLayout>
